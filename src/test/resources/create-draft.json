@@ -1,0 +1,127 @@
+{
+  "header": {
+    "schemaType": "incident",
+    "version": 1,
+    "sourceId": "97333bc5-2d83-4e69-9b16-e6c8df48d859",
+    "schemaVersion": "2.3"
+  },
+  "incident": {
+    "location": {
+      "subjectOfFederation": 50,
+      "locality": "6677"
+    },
+    "measuresAndRecomendations": [
+      {
+        "action": "measures",
+        "text": "1",
+        "sourceId": "07df1309-8b28-4a8c-910a-c2ce8e381448",
+        "dateTimeAt": "2019-09-24T06:31:21.578Z"
+      }
+    ],
+    "typeOfAttack": "controlCenters",
+    "fixationAt": "2019-08-26T17:00:00Z",
+    "assistance": "HLP",
+    "classification": {
+      "EXT": {
+        "eventList": [
+          {
+            "events": "UO_WC",
+            "TaMfunds": "SMS"
+          }
+        ]
+      },
+      "typeOfIncident": "FMA"
+    },
+    "damage": {
+      "relative": "ESS",
+      "operating": "1"
+    },
+    "lawEnforcementRequest": {
+      "request": "UNKW"
+    },
+    "attachments": [],
+    "antifraud": {
+      "transfers": [
+        {
+          "transferInfo": {
+            "payerTransferId": {
+              "type": "bankAccount",
+              "bankAccount": {
+                "sum": 2,
+                "currency": "643",
+                "datetimeAt": "2019-09-13T06:31:42.929Z",
+                "number": "21457896545666322114",
+                "bik": "049246691"
+              }
+            },
+            "payeeTransferId": {
+              "type": "bankAccount",
+              "bankAccount": {
+                "number": "55554448666999999999",
+                "bik": "045004850"
+              }
+            },
+            "device": {
+              "IMSI": "333"
+            },
+            "detectedBy": "AFR"
+          },
+          "payer": {
+            "orgType": "company",
+            "inn": "7714009587",
+            "hashes": []
+          },
+          "transferAdditionalInfo": {
+            "additionalTransactionApprove": [
+              "NAA"
+            ],
+            "crossBorder": "DOM"
+          },
+          "analyticForm": {
+            "cardType": "prepaid",
+            "cardProduct": "corporate",
+            "oddPlace": false,
+            "newReceiver": false,
+            "lowTimeInterval": false,
+            "operationType": "transfer",
+            "oldReceiver": false,
+            "crossCountry": false,
+            "oddAmount": false
+          },
+          "sourceId": "61700cd1-9ece-474f-b031-e0b768b4278b"
+        }
+      ]
+    },
+    "finalReport": {
+      "closeDateAt": "2019-09-24T06:30:30.628Z",
+      "signatures": [],
+      "rootCause": "1",
+      "mainActions": "1",
+      "recovery": "Full",
+      "description": "1",
+      "snort": []
+    },
+    "description": "аааа",
+    "impacts": {
+      "controlCenters": [
+        {
+          "intruderIp": "",
+          "target": {
+            "ip": "0.0.0.0",
+            "url": ""
+          },
+          "nodes": [],
+          "intruderActions": "",
+          "hostUrl": "",
+          "description": ""
+        }
+      ]
+    },
+    "vectorCode": "EXT",
+    "registration": {
+      "department": "3444",
+      "technicalDevice": "444"
+    },
+    "serviceType": []
+  }
+}

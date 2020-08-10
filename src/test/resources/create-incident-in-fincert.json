@@ -1,0 +1,100 @@
+{  "attachments": [
+    {
+      "data": {
+        "header": {
+          "schemaType": "incident",
+          "version": 1,
+          "sourceId": "53249008-2b07-4dc2-ab9f-940e0c691e63",
+          "schemaVersion": "2.3"
+        },
+        "incident": {
+          "finalReport": {
+            "snort": [],
+            "signatures": [],
+            "closeDateAt": "2018-08-06T08:39:38.298Z"
+          },
+          "actions": [],
+          "vectorCode": "INT",
+          "description": "cft_Проверка синхронизации",
+          "typeOfAttack": "other",
+          "classification": {
+            "INT": [
+              {
+                "events": "MTR_UA",
+                "typeOfIntruder": "INT_ORG"
+              }
+            ],
+            "typeOfIncident": "MTR"
+          },
+          "location": {
+            "subjectOfFederation": 77,
+            "locality": "dsnbnbbnbn"
+          },
+          "attachments": [],
+          "measuresAndRecomendations": [
+            {
+              "action": "measures",
+              "text": "1",
+              "dateTimeAt": "2018-09-06T08:40:13.189Z"
+            }
+          ],
+          "damage": {},
+          "registration": {
+            "technicalDevice": "апап",
+            "department": "df"
+          },
+          "serviceType": [],
+          "assistance": "NND",
+          "antifraud": {
+            "transfers": [
+              {
+                "isNew": true,
+                "transferAdditionalInfo": {
+                  "crossBorder": "DOM",
+                  "additionalTransactionApprove": [
+                    "3DS",
+                    "DCS"
+                  ]
+                },
+                "sourceId": "53249008-2b07-4dc2-ab9f-940e0c691e63",
+                "payer": {
+                  "hash": "5c5661eb198c6c80c18556f88758bced21b3a2ebf8fcda91742170127e726276",
+                  "hashSnils": "63640264849a87c90356129d99ea165e37aa5fabc1fea46906df1a7ca50db492",
+                  "inn": "6449013711"
+                },
+                "transferInfo": {
+                  "payerTransferId": {
+                    "phoneNumber": {
+                      "number": "89131231222",
+                      "datetimeAt": "2018-07-31T21:00:00.000Z",
+                      "currency": "643",
+                      "sum": 100
+                    },
+                    "type": "phoneNumber"
+                  },
+                  "payeeTransferId": {
+                    "phoneNumber": {
+                      "number": "89131231222",
+                      "countryCode": "RU"
+                    },
+                    "type": "phoneNumber"
+                  }
+                }
+              }
+            ]
+          },
+          "fixationAt": "2018-09-06T08:39:38.298Z",
+          "fixationDate": "2018-09-06T08:39:38.298Z",
+          "impacts": {
+            "other": {
+              "comment": ""
+            }
+          },
+          "lawEnforcementRequest": {
+            "request": "NPL"
+          }
+        }
+      }
+    }
+  ]
+}

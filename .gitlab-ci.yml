@@ -1,0 +1,59 @@
+stages:
+  - test_mock
+  - test_remote
+
+.test_base:
+  image: ${BUILD_REGISTRY}/maven:3.6-jdk-8-slim
+  variables:
+    MAVEN_OPTS: >
+      -Dhttps.protocols=TLSv1.2
+      -Dmaven.repo.local=${CI_PROJECT_DIR}/.m2/repository
+      -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN
+      -Dorg.slf4j.simpleLogger.showDateTime=true
+      -Djava.awt.headless=true
+      -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=2
+    MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version"
+  before_script:
+    - mkdir -p /root/.m2/
+    - cp -f .m2/settings.xml /root/.m2/
+    - >
+      $JAVA_HOME/bin/keytool -import -noprompt -trustcacerts
+      -alias CerberRootCA
+      -file ./ca/CerberRootCA.crt
+      -keystore $JAVA_HOME/jre/lib/security/cacerts
+      -storepass changeit
+  cache:
+    key: "${CI_COMMIT_REF_NAME}"
+    paths:
+      - ./.m2/repository
+
+test_mock:
+  extends: .test_base
+  stage: test_mock
+  only:
+    - master
+  variables:
+    COI_REALM: coi-beta
+    COI_USERNAME: systemtests
+    COI_PASSWORD: systemtests
+  script:
+    - >
+      mvn ${MAVEN_CLI_OPTS} test
+      -Dtest=shared/*,mock/*
+      -DfailIfNoTests=false
+
+test_remote:
+  extends: .test_base
+  stage: test_remote
+  only:
+    - master
+  when: manual
+  variables:
+    COI_REALM: coi
+    COI_USERNAME: systemtests
+    COI_PASSWORD: systemtests
+  script:
+    - >
+      mvn ${MAVEN_CLI_OPTS} test
+      -Dtest=shared/*,remote/*
+      -DfailIfNoTests=false

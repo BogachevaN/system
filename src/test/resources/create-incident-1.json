@@ -1,0 +1,90 @@
+{
+  "assignee": "",
+  "attachment": {
+    "header": {
+      "schemaType": "incident",
+      "schemaVersion": "2.3",
+      "sourceId": "01b2f8e8-f46c-4d01-a91e-bc375eb21a7c",
+      "version": 1
+    },
+    "incident": {
+      "antifraud": {
+        "transfers": [
+          {
+            "payer": {
+              "hashes": [
+                {
+                  "hash": "6e222f64406eb6ce9628d83d2cbac82258b20491df84f7ee34a4933341474c25",
+                  "hashSnils": "63640264849a87c90356129d99ea165e37aa5fabc1fea46906df1a7ca50db492"
+                }
+              ]
+            },
+            "transferAdditionalInfo": {
+              "additionalTransactionApprove": [],
+              "crossBorder": "DOM"
+            },
+            "transferInfo": {
+              "payeeTransferId": {
+                "phoneNumber": {
+                  "number": "89131231313",
+                  "countryCode": "RU"
+                },
+                "type": "phoneNumber"
+              },
+              "payerTransferId": {
+                "phoneNumber": {
+                  "number": "89131231313",
+                  "countryCode": "RU",
+                  "currency": "643",
+                  "datetimeAt": "2019-12-01T06:05:00.000Z",
+                  "sum": "1000"
+                },
+                "type": "phoneNumber"
+              }
+            },
+            "sourceId": "62d4363a-2b2d-4d06-8104-7acf9f6391a3"
+          }
+        ]
+      },
+      "assistance": "NND",
+      "typeOfAttack": "malware",
+      "vectorCode": "INT",
+      "classification": {
+        "typeOfIncident": "BAC",
+        "INT": [
+          {
+            "events": "MTR_UA",
+            "typeOfIntruder": "INT_ORG"
+          }
+        ]
+      },
+      "damage": {
+        "operating": "1000",
+        "relative": "MOD"
+      },
+      "description": "Описание инцидента",
+      "fixationAt": "2019-12-01T06:00:00.000Z",
+      "impacts": {},
+      "lawEnforcementRequest": {
+        "request": "NPL"
+      },
+      "location": {
+        "locality": "Населенный пункт",
+        "subjectOfFederation": "1"
+      },
+      "measuresAndRecomendations": [],
+      "registration": {
+        "department": "Структурное подразделение",
+        "technicalDevice": "Техническое средство"
+      },
+      "serviceType": [
+        {
+          "description": "Описание сервиса",
+          "type": "RBS"
+        }
+      ]
+    }
+  },
+  "description": "cft_Описание тестового инцидента",
+  "theme": "Тема тестового инцидента"
+}
